@@ -56,16 +56,13 @@ public class EventController : MonoBehaviour {
 
 	public void OnTriggerEnter2D(Collider2D whoHitMe)
 	{
-		Debug.LogWarning ("Flag 1");
 		Character c = whoHitMe.GetComponent<Character> ();
 		if (c == null)
 			return;
 		
 		if (CanActivateEvent (this)) 
 		{
-			Debug.LogWarning ("Flag 2");
 			StartCoroutine (ActivateAfterSeconds (ActivationDelay));
-
 		}
 
 	}
