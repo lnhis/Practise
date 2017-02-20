@@ -84,6 +84,8 @@
     <Compile Include="Assets\Scripts\EventController.cs" />
     <Compile Include="Assets\Scripts\GameInput.cs" />
     <Compile Include="Assets\Scripts\PanelSpawnerController.cs" />
+    <Compile Include="Assets\Scripts\SoundStopper.cs" />
+    <Compile Include="Assets\Scripts\SoundSystem.cs" />
     <Compile Include="Assets\Scripts\TeleportController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

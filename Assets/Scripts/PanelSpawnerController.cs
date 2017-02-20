@@ -17,12 +17,11 @@ public class PanelSpawnerController : MonoBehaviour
 	public void Spawn(string panelName, float closeAfterSeconds)
 	{
 		GameObject go = Panels.FirstOrDefault (xs => xs.name == panelName);
-		Debug.LogWarning ("SPAWN PANEL: " + go);
-		if (go != null) {
+		if (go != null)
+        {
 			GameObject newGo = GameObject.Instantiate (go);
 			newGo.transform.SetParent (this.transform, false);
 			StartCoroutine (CloseAfterSeconds (newGo, closeAfterSeconds));
-
 		}
 
 	}

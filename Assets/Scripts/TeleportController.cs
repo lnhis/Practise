@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TeleportController : MonoBehaviour {
+public class TeleportController : MonoBehaviour
+{
 
 	public static Dictionary<string, TeleportController> Teleports = new Dictionary<string, TeleportController> ();
 
@@ -53,14 +54,13 @@ public class TeleportController : MonoBehaviour {
 		
 		if (Active)
 			return;
-		Debug.LogWarning ("Flag 1: " + whoHitMe.transform.name);
+
 		TeleportController target = Teleports [TeleportsTo];
 		target.Active = true;
 		whoHitMe.transform.position = target.GetSpawnPos ();//target.transform.position;
 	}
 	public void OnTriggerExit2D(Collider2D whoLeftMe)
 	{
-		Debug.LogWarning ("Flag 2: " + whoLeftMe.transform.name);
 		Active = false;
 
 	}

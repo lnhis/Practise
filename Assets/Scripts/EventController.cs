@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventController : MonoBehaviour {
+public class EventController : MonoBehaviour
+{
 
 	public static HashSet<EventController> ActivatedEvents = new HashSet<EventController>();
 
 	public static bool CanActivateEvent(EventController ev)
 	{
-		if (ActivatedEvents.Contains (ev)) {
-			if (ev.CanActivateAgain > 0f && Time.time - ev.ActivationTime > ev.CanActivateAgain) {
+		if (ActivatedEvents.Contains (ev))
+        {
+			if (ev.CanActivateAgain > 0f && Time.time - ev.ActivationTime > ev.CanActivateAgain)
+            {
 				return true;
 			}
 			return false;
@@ -37,16 +40,6 @@ public class EventController : MonoBehaviour {
 	[HideInInspector]
 	public float ActivationTime= 0f;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
   	private IEnumerator ActivateAfterSeconds(float seconds)
 	{
 		yield return new WaitForSeconds(seconds);
@@ -62,20 +55,30 @@ public class EventController : MonoBehaviour {
 		
 		if (CanActivateEvent (this)) 
 		{
-			StartCoroutine (ActivateAfterSeconds (ActivationDelay));
+            ActivationTime = Time.time;
+
+            StartCoroutine (ActivateAfterSeconds (ActivationDelay));
 		}
 
 	}
 
 	private void ActivateEvent()
 	{
-		Debug.LogWarning ("Activate event!");
-		foreach (GameObject go in DeactivateObjects) {
+		foreach (GameObject go in DeactivateObjects)
+        {
 			go.SetActive (false);
 		}
-		foreach (GameObject go in ActivateObjects) {
+		foreach (GameObject go in ActivateObjects)
+        {
 			go.SetActive (true);
 		}
 		PanelSpawnerController.Instance.Spawn (OpenPanel, ClosePanelAfter);
-	}
+
+        if(StopMusic)
+        {
+            SoundSystem.Instance.StopMusic();
+        }
+        SoundSystem.Instance.PlayMusic(PlayMusic);
+        SoundSystem.Instance.PlaySound(PlaySound);
+    }
 }
