@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C4A7234B-DFE9-25BA-F8BA-CEB3692977F9}</ProjectGuid>
+    <ProjectGuid>{58DBB80A-B082-F1A2-2213-0CEC8E6F5957}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -55,6 +55,8 @@
      <Compile Include="Assets\Scripts\EventController.cs" />
      <Compile Include="Assets\Scripts\GameInput.cs" />
      <Compile Include="Assets\Scripts\PanelSpawnerController.cs" />
+     <Compile Include="Assets\Scripts\SoundStopper.cs" />
+     <Compile Include="Assets\Scripts\SoundSystem.cs" />
      <Compile Include="Assets\Scripts\TeleportController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
