@@ -5,16 +5,16 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0AC6AAB1-CDD9-6AC5-18A3-A01551DCA444}</ProjectGuid>
+    <ProjectGuid>{4C0C5DAC-9F0B-C9D2-4A57-B84E4967182E}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
-    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.5.1f1</UnityVersion>
     <RootNamespace></RootNamespace>
@@ -52,44 +52,87 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>Library\UnityAssemblies\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.EditorTestsRunner">
+      <HintPath>Library\UnityAssemblies\UnityEditor.EditorTestsRunner.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\UnityAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.PlaymodeTestsRunner">
+      <HintPath>Library\UnityAssemblies\UnityEditor.PlaymodeTestsRunner.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.PlaymodeTestsRunner">
       <HintPath>Library\UnityAssemblies\UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TreeEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.TreeEditor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.HoloLens">
+      <HintPath>Library\UnityAssemblies\UnityEditor.HoloLens.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.VR">
+      <HintPath>Library\UnityAssemblies\UnityEditor.VR.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VR">
       <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.Android.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.WebGL.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.OSXStandalone.Extensions">
+      <HintPath>Library\UnityAssemblies\UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\2DTerrainEditor\Example\Scripts\Terrain2DGenerator.cs" />
-    <Compile Include="Assets\2DTerrainEditor\Example\Scripts\Terrain2DRealtimeDeformer.cs" />
-    <Compile Include="Assets\2DTerrainEditor\Scripts\TerrainEditor2D.cs" />
-    <Compile Include="Assets\Scripts\AnimationController.cs" />
-    <Compile Include="Assets\Scripts\Button.cs" />
-    <Compile Include="Assets\Scripts\Camera2DFollow.cs" />
-    <Compile Include="Assets\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\Character.cs" />
-    <Compile Include="Assets\Scripts\EventController.cs" />
-    <Compile Include="Assets\Scripts\GameInput.cs" />
-    <Compile Include="Assets\Scripts\PanelSpawnerController.cs" />
-    <Compile Include="Assets\Scripts\SoundStopper.cs" />
-    <Compile Include="Assets\Scripts\SoundSystem.cs" />
-    <Compile Include="Assets\Scripts\TeleportController.cs" />
+    <ProjectReference Include="Practise.csproj">
+      <Project>{0AC6AAB1-CDD9-6AC5-18A3-A01551DCA444}</Project>
+      <Name>Practise</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\2DTerrainEditor\Scripts\Editor\TerrainEditor2DIns.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\2DTerrainEditor\Readme.txt" />
