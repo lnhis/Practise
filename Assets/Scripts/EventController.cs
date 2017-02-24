@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EventController : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class EventController : MonoBehaviour
 
 	public float ClosePanelAfter = 1f;
 	public string OpenPanel;
+    public string LoadScene;
 
 	public bool TeleportSonic = false;
 	public Vector2 TeleportPosition;
@@ -64,6 +66,10 @@ public class EventController : MonoBehaviour
 
 	private void ActivateEvent()
 	{
+        if(!string.IsNullOrEmpty(LoadScene))
+        {
+            SceneManager.LoadScene(LoadScene);
+        }
 		foreach (GameObject go in DeactivateObjects)
         {
 			go.SetActive (false);

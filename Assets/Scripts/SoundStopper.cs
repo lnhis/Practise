@@ -2,15 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundStopper : MonoBehaviour {
+public class SoundStopper : MonoBehaviour
+{
+    private AudioSource ass;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Awake()
+    {
+        ass = this.GetComponent<AudioSource>();
+    }
+    
+    void Update ()
+    {
+        if(!ass.isPlaying)
+        {
+            GameObject.Destroy(this.gameObject);
+        }
+    }
 }

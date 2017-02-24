@@ -102,7 +102,7 @@ public class SoundSystem : MonoBehaviour
 
         ass.clip = clip;
         ass.loop = true;
-        ass.volume = ambientVolume;
+        ass.volume = musicVolume;
         ass.mute = MuteAllSound;
         prefab.transform.SetParent(this.transform);
         prefab.transform.position = Vector2.zero;
